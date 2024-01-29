@@ -292,6 +292,7 @@ class Welcome5(dict):
     primary_notification_product_image_id: bool
     company_signature: str
     signature_plain_text: str
+    subject_products_data: SubjectProductsData
     ntype: str
     status_id: str
     issue_date: str
@@ -304,7 +305,7 @@ class Welcome5(dict):
                  deleted_support_material_files: List[Any], attachmentType: str,
                  primary_notification_product_image_index: int, primary_notification_product_image_id: bool,
                  company_signature: str, signature_plain_text: str,
-                 ntype: str,
+                 subject_products_data: SubjectProductsData, ntype: str,
                  status_id: str, issue_date: str, created_by: str, created_by_email: str,
                  audit_notification_required: bool) -> None:
         self.name = name
@@ -321,6 +322,7 @@ class Welcome5(dict):
         self.primary_notification_product_image_id = primary_notification_product_image_id
         self.company_signature = company_signature
         self.signature_plain_text = signature_plain_text
+        self.subject_products_data = subject_products_data
         self.ntype = ntype
         self.status_id = status_id
         self.issue_date = issue_date
@@ -337,6 +339,7 @@ class Welcome5(dict):
                       primaryNotificationProductImageIndex=primary_notification_product_image_index,
                       primaryNotificationProductImageId=primary_notification_product_image_id,
                       companySignature=company_signature, signaturePlainText=signature_plain_text,
+                      subjectProductsData=subject_products_data,
                       type=ntype, statusId=status_id, issueDate=issue_date, createdBy=created_by,
                       createdByEmail=created_by_email, auditNotificationRequired=audit_notification_required)
 

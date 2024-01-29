@@ -34,7 +34,7 @@ from api_clases import EntityMap, \
     FetchConsigneeDetailsService, FetchActionsRequiredData, FetchActionsRequiredService, FetchNotificationAssigneesData, \
     FetchNotificationAssigneesService, FetchBrfRecallInformationData, FetchBrfRecallInformationService, SPData, \
     get_product_images_subject_products_files_list, SubjectProductsInputToCreateNotification, \
-    get_subject_products_input_file
+    get_subject_products_input_file, SubjectProductsData, get_notification_files_list
 from api_clases import Welcome5, AccMapData, CloseNotifPayload, \
     PredefinedDatum, \
     CustomAction, \
@@ -483,20 +483,20 @@ def notif_p1(n_type, without_support_tools, process_txt, process_lock, out_file)
     Potential Impact convert to html and json
     '''
 
-    # spd = SubjectProductsData([], datalist, True)
-    spd_input_file_json = SubjectProductsInputToCreateNotification([], datalist, True)
+    spd = SubjectProductsData([], datalist, True)
+    # spd_input_file_json = SubjectProductsInputToCreateNotification([], datalist, True)
     # delete_contents_of_folder("./subjectproducts")
     # if is_directory_empty("./subjectproducts")
-    with open("./subjectproducts/sample" + process_txt + ".txt", "w") as outfile:
-        outfile.write(json.dumps(spd_input_file_json))
-        outfile.close()
+    # with open("./subjectproducts/sample" + process_txt + ".txt", "w") as outfile:
+    #     outfile.write(json.dumps(spd_input_file_json))
+    #     outfile.close()
     npl = random.randint(1, int(number_of_product_images_to_load))
     custom_print("Number of product images: " + str(npl), out_file=out_file, process_id=process_txt)
     # print("Number of product images: " + str(npl), file=out_file)
-    # prod_desc = fake.text(max_nb_chars=pid_number_chars).replace(". ", ".<br>").replace(".\n", ".<br>")
-    # po_impact = fake.text(max_nb_chars=pid_number_chars).replace(". ", ".<br>").replace(".\n", ".<br>")
-    prod_desc = get_base64_encoded_string(json.dumps(product_desc_html_json), out_file)
-    po_impact = get_base64_encoded_string(json.dumps(potential_impact_html_json), out_file)
+    prod_desc = fake.text(max_nb_chars=pid_number_chars).replace(". ", ".<br>").replace(".\n", ".<br>")
+    po_impact = fake.text(max_nb_chars=pid_number_chars).replace(". ", ".<br>").replace(".\n", ".<br>")
+    # prod_desc = get_base64_encoded_string(json.dumps(product_desc_html_json), out_file)
+    # po_impact = get_base64_encoded_string(json.dumps(potential_impact_html_json), out_file)
     note_name = chosen_language + ":" + fake.text(max_nb_chars=(100 - 1 - len(chosen_language)))
 
     token_bearer = bearer_token.split("Bearer ", 1)[1]
@@ -508,7 +508,7 @@ def notif_p1(n_type, without_support_tools, process_txt, process_lock, out_file)
                     company_names[rand_acc],
                     prod_desc, po_impact, [], [],
                     "supportMaterial", random.randint(0, int(npl) - 1), False,
-                    get_base64_encoded_string(json.dumps(company_sign_html_json), out_file), company_sign_plain,
+                    json.dumps(company_sign_html_json), company_sign_plain, spd,
                     note_type_id,
                     "4", issue_date, notif_creator_name, notif_creator_email, True)
 
@@ -530,8 +530,8 @@ def notif_p1(n_type, without_support_tools, process_txt, process_lock, out_file)
     start_t = timeit.default_timer()
 
     response = requests.post(url, headers=headers_cn_p1, data=form_data,
-                             files=get_product_images_subject_products_files_list(npl, process_txt, out_file,
-                                                                                  process_lock), verify=False)
+                             files=get_notification_files_list(without_support_tools, npl, out_file, process_lock),
+                             verify=False)
     cn_time = round(timeit.default_timer() - start_t, 2)
     # print(response.content.decode())
     custom_print(response.content.decode(), out_file=out_file, process_id=process_txt)
@@ -580,7 +580,7 @@ def notif_up_sup_tools(without_support_tools, notification_db_id, process_txt, p
         nst = random.randint(1, int(number_of_supporting_tools_to_load))
         files_list_random = list_random_file_names("./material", int(nst), out_file)
         for filename in files_list_random:
-            file_size_mb = utils.get_file_size_mb("./material/"+ filename)
+            file_size_mb = utils.get_file_size_mb("./material/" + filename)
             start_t = timeit.default_timer()
             response_sup_tools = requests.post(url, headers=headers_cn_p1, data=sub_tools_form_data,
                                                files=get_brf_one_file(without_support_tools, filename, process_lock),
@@ -1203,8 +1203,9 @@ def notif_assign_accounts(notification_db_id, out_file, consig_filter, process_t
     response = requests.post(url, headers=s_headers, data=json.dumps(wel2), verify=False)
     cn_time = round(timeit.default_timer() - start_t, 2)
 
-    custom_print("saveAccountNotificationMapping Service Time : {0:.2f} Seconds".format(timeit.default_timer() - start_t),
-                 out_file=out_file, is_fig_font=False)
+    custom_print(
+        "saveAccountNotificationMapping Service Time : {0:.2f} Seconds".format(timeit.default_timer() - start_t),
+        out_file=out_file, is_fig_font=False)
 
     if response.status_code != 200:
         write_stats_to_csv_per_process("sanm", cn_time, process_txt, str(response.content.decode()))
@@ -3740,7 +3741,7 @@ if __name__ == '__main__':
 
                 # Finally, the files are joined
                 df = pd.concat(map(pd.read_csv, joined_list), ignore_index=True)
-                df.to_csv("./perf_data/"+patter+"_combined.csv", index=False)
+                df.to_csv("./perf_data/" + patter + "_combined.csv", index=False)
                 # print(df)
     except:
         pass
