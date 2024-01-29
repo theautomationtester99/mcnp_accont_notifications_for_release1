@@ -1,0 +1,5 @@
+START /WAIT load_db_notifications_and_mapping
+START /WAIT load_db_notifications_and_mapping
+START /WAIT load_db_notifications_and_mapping
+START /WAIT load_db_notifications_and_mapping
+START /WAIT load_db_notifications_and_mapping

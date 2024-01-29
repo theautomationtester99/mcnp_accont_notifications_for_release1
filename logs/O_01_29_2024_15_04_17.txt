@@ -1,0 +1,178 @@
+Random locale is : mt_MT
+Random locale is : it_IT
+Thread O Progress
+Progress 1 of 15
+Random locale is : mt_MT
+Thread O Progress
+Progress 2 of 15
+Random locale is : es_ES
+Thread O Progress
+Progress 3 of 15
+Random locale is : it_IT
+Thread O Progress
+Progress 4 of 15
+create customer notifications with "new" status
+Loading 446 Subject Products
+Number of product images: 8
+{"status":true,"message":"Notification saved","data":16674}
+Create Notification Service Time : 17.68 Seconds
+[16674, 'Patient Notification', 'OJJXV77T9_Pa']
+Upload support tools to Notification: pexels-photo-3938022.jpeg
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 2.36 Seconds
+Upload support tools to Notification: retha-ferguson-954.jpeg
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 1.72 Seconds
+number of assignees: 1
+saveNotificationAssignees Service Time : 1.11 Seconds
+{"status":true,"message":"Success"}
+Assign Assignees
+submitNotification Service Time : 1.50 Seconds
+Submitted
+{"status":true,"errorPopupFlag":false,"message":"Notification Sent successfully"}
+Random locale is : ro_RO
+Thread O Progress
+Progress 5 of 15
+new closed notifications 5y back
+Loading 493 Subject Products
+Number of product images: 7
+{"status":true,"message":"Notification saved","data":16676}
+Create Notification Service Time : 8.80 Seconds
+[16676, 'Patient Notification', 'OPEXAVJ03_Pa']
+Upload support tools to Notification: miguel-a-padrinan-722.jpeg
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 3.01 Seconds
+number of assignees: 1
+saveNotificationAssignees Service Time : 1.33 Seconds
+{"status":true,"message":"Success"}
+Assign Assignees
+submitNotification Service Time : 1.33 Seconds
+Submitted
+{"status":true,"errorPopupFlag":false,"message":"Notification Sent successfully"}
+Changing Issued date to 2022-08-25
+{"status":true,"message":"Successfully closed"}
+Random locale is : et_EE
+Thread O Progress
+Progress 6 of 15
+Random locale is : es_ES
+Thread O Progress
+Progress 7 of 15
+Random locale is : lv_LV
+Thread O Progress
+Progress 8 of 15
+create notifications with "new" status and aging
+Loading 405 Subject Products
+Number of product images: 1
+{"status":true,"message":"Notification saved","data":16678}
+Create Notification Service Time : 5.47 Seconds
+[16678, 'Patient Notification', 'ONBY0EP9T_Pa']
+Upload support tools to Notification: 640 (1).mp4
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 6.43 Seconds
+Upload support tools to Notification: file_example_MP4_1280_10MG.mp4
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 8.61 Seconds
+number of assignees: 1
+saveNotificationAssignees Service Time : 0.95 Seconds
+{"status":true,"message":"Success"}
+Assign Assignees
+submitNotification Service Time : 0.82 Seconds
+Submitted
+{"status":true,"errorPopupFlag":false,"message":"Notification Sent successfully"}
+Changing Issued date to 2022-11-06
+Loading 430 Subject Products
+Number of product images: 9
+{"status":true,"message":"Notification saved","data":16680}
+Create Notification Service Time : 15.98 Seconds
+[16680, 'HCP Notification', 'OB5OINC1A_HC']
+Upload support tools to Notification: thermometer-headache-pain-pills-139398.jpeg
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 2.67 Seconds
+Upload support tools to Notification: pexels-photo-3825458.jpeg
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 1.80 Seconds
+number of assignees: 3
+saveNotificationAssignees Service Time : 0.92 Seconds
+{"status":true,"message":"Success"}
+Assign Assignees
+submitNotification Service Time : 1.10 Seconds
+Submitted
+{"status":true,"errorPopupFlag":false,"message":"Notification Sent successfully"}
+Random locale is : pl_PL
+Thread O Progress
+Progress 9 of 15
+new closed notifications
+Loading 422 Subject Products
+Number of product images: 5
+{"status":true,"message":"Notification saved","data":16682}
+Create Notification Service Time : 9.66 Seconds
+[16682, 'Patient Notification', 'O16MU2UPW_nosptls_Pa']
+number of assignees: 2
+saveNotificationAssignees Service Time : 0.82 Seconds
+{"status":true,"message":"Success"}
+Assign Assignees
+submitNotification Service Time : 1.57 Seconds
+Submitted
+{"status":true,"errorPopupFlag":false,"message":"Notification Sent successfully"}
+{"status":true,"message":"Successfully closed"}
+Random locale is : el_GR
+Thread O Progress
+Progress 10 of 15
+create notifications with "new" status and without support tools
+Loading 442 Subject Products
+Number of product images: 6
+{"status":true,"message":"Notification saved","data":16684}
+Create Notification Service Time : 6.28 Seconds
+[16684, 'Patient Notification', 'O34LZIB15_nosptls_Pa']
+number of assignees: 4
+saveNotificationAssignees Service Time : 0.90 Seconds
+{"status":true,"message":"Success"}
+Assign Assignees
+submitNotification Service Time : 0.82 Seconds
+Submitted
+{"status":true,"errorPopupFlag":false,"message":"Notification Sent successfully"}
+Random locale is : es_ES
+Thread O Progress
+Progress 11 of 15
+Random locale is : da_DK
+Thread O Progress
+Progress 12 of 15
+create notifications with "draft" status
+Loading 441 Subject Products
+Number of product images: 3
+{"status":true,"message":"Notification saved","data":16686}
+Create Notification Service Time : 7.46 Seconds
+[16686, 'Patient Notification', 'ODK80OIAX_nosptls_Pa']
+number of assignees: 5
+saveNotificationAssignees Service Time : 1.08 Seconds
+{"status":true,"message":"Success"}
+Assign Assignees
+Random locale is : ga_IE
+Thread O Progress
+Progress 13 of 15
+create notifications with "new" status
+Loading 464 Subject Products
+Number of product images: 6
+{"status":true,"message":"Notification saved","data":16688}
+Create Notification Service Time : 13.90 Seconds
+[16688, 'Patient Notification', 'O6LD96CBS_Pa']
+Upload support tools to Notification: Test Script and Execution - How _bb186a68aa5b46f8a64e0ac2068c9c16-251122-0749-1526.pdf
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 2.36 Seconds
+Upload support tools to Notification: sample-5.mp4
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 3.41 Seconds
+number of assignees: 3
+saveNotificationAssignees Service Time : 0.85 Seconds
+{"status":true,"message":"Success"}
+Assign Assignees
+submitNotification Service Time : 0.92 Seconds
+Submitted
+{"status":true,"errorPopupFlag":false,"message":"Notification Sent successfully"}
+Random locale is : sk_SK
+Thread O Progress
+Progress 14 of 15
+Random locale is : es_ES
+Thread O Progress
+Progress 15 of 15
+Execution time: O 0:04:03

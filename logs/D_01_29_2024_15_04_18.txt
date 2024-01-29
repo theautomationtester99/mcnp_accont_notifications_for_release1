@@ -1,0 +1,175 @@
+Random locale is : hr_HR
+Random locale is : mt_MT
+Thread D Progress
+Progress 1 of 15
+new closed notifications
+Loading 448 Subject Products
+Number of product images: 6
+{"status":true,"message":"Notification saved","data":16673}
+Create Notification Service Time : 10.68 Seconds
+[16673, 'HCP Notification', 'DEKS2ZVAL_nosptls_HC']
+number of assignees: 4
+saveNotificationAssignees Service Time : 1.00 Seconds
+{"status":true,"message":"Success"}
+Assign Assignees
+submitNotification Service Time : 4.38 Seconds
+Submitted
+{"status":true,"errorPopupFlag":false,"message":"Notification Sent successfully"}
+{"status":true,"message":"Successfully closed"}
+Random locale is : it_IT
+Thread D Progress
+Progress 2 of 15
+create notifications with "new" status and aging
+Loading 430 Subject Products
+Number of product images: 2
+{"status":true,"message":"Notification saved","data":16675}
+Create Notification Service Time : 4.61 Seconds
+[16675, 'Patient Notification', 'DDSNFDUO4_Pa']
+Upload support tools to Notification: pexels-photo-3683118.jpeg
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 3.02 Seconds
+Upload support tools to Notification: sample-50-MB-pdf-file.pdf
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 18.26 Seconds
+number of assignees: 2
+saveNotificationAssignees Service Time : 0.97 Seconds
+{"status":true,"message":"Success"}
+Assign Assignees
+submitNotification Service Time : 1.34 Seconds
+Submitted
+{"status":true,"errorPopupFlag":false,"message":"Notification Sent successfully"}
+Changing Issued date to 2023-01-22
+Loading 436 Subject Products
+Number of product images: 9
+{"status":true,"message":"Notification saved","data":16677}
+Create Notification Service Time : 13.92 Seconds
+[16677, 'Patient Notification', 'DQH68CO0W_Pa']
+Upload support tools to Notification: pexels-photo-3936358.jpeg
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 2.70 Seconds
+Upload support tools to Notification: Sample-Image-file-Download.jpeg
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 7.17 Seconds
+number of assignees: 2
+saveNotificationAssignees Service Time : 0.96 Seconds
+{"status":true,"message":"Success"}
+Assign Assignees
+submitNotification Service Time : 1.37 Seconds
+Submitted
+{"status":true,"errorPopupFlag":false,"message":"Notification Sent successfully"}
+Random locale is : sk_SK
+Thread D Progress
+Progress 3 of 15
+Random locale is : es_ES
+Thread D Progress
+Progress 4 of 15
+Random locale is : nl_NL
+Thread D Progress
+Progress 5 of 15
+create notifications with "draft" status
+Loading 476 Subject Products
+Number of product images: 1
+{"status":true,"message":"Notification saved","data":16679}
+Create Notification Service Time : 5.80 Seconds
+[16679, 'Patient Notification', 'DWSQR7BJJ_nosptls_Pa']
+number of assignees: 3
+saveNotificationAssignees Service Time : 3.42 Seconds
+{"status":true,"message":"Success"}
+Assign Assignees
+Random locale is : pt_PT
+Thread D Progress
+Progress 6 of 15
+Random locale is : sv_SE
+Thread D Progress
+Progress 7 of 15
+Random locale is : pt_PT
+Thread D Progress
+Progress 8 of 15
+new closed notifications 5y back
+Loading 495 Subject Products
+Number of product images: 8
+{"status":true,"message":"Notification saved","data":16681}
+Create Notification Service Time : 10.49 Seconds
+[16681, 'Patient Notification', 'DD4DJGDCC_Pa']
+Upload support tools to Notification: sample_640x360.mp4
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 2.51 Seconds
+number of assignees: 1
+saveNotificationAssignees Service Time : 0.87 Seconds
+{"status":true,"message":"Success"}
+Assign Assignees
+submitNotification Service Time : 0.75 Seconds
+Submitted
+{"status":true,"errorPopupFlag":false,"message":"Notification Sent successfully"}
+Changing Issued date to 2022-10-11
+{"status":true,"message":"Successfully closed"}
+Random locale is : da_DK
+Thread D Progress
+Progress 9 of 15
+create notifications with "new" status and without support tools
+Loading 465 Subject Products
+Number of product images: 3
+{"status":true,"message":"Notification saved","data":16683}
+Create Notification Service Time : 9.07 Seconds
+[16683, 'Patient Notification', 'D6U0G4S5X_nosptls_Pa']
+number of assignees: 5
+saveNotificationAssignees Service Time : 1.91 Seconds
+{"status":true,"message":"Success"}
+Assign Assignees
+submitNotification Service Time : 0.97 Seconds
+Submitted
+{"status":true,"errorPopupFlag":false,"message":"Notification Sent successfully"}
+Random locale is : mt_MT
+Thread D Progress
+Progress 10 of 15
+Random locale is : sk_SK
+Thread D Progress
+Progress 11 of 15
+Random locale is : hr_HR
+Thread D Progress
+Progress 12 of 15
+create notifications with "new" status
+Loading 440 Subject Products
+Number of product images: 8
+{"status":true,"message":"Notification saved","data":16685}
+Create Notification Service Time : 10.79 Seconds
+[16685, 'HCP Notification', 'DZUKYKD1Z_HC']
+Upload support tools to Notification: miguel-a-padrinan-722.jpeg
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 2.05 Seconds
+number of assignees: 5
+saveNotificationAssignees Service Time : 0.89 Seconds
+{"status":true,"message":"Success"}
+Assign Assignees
+submitNotification Service Time : 0.87 Seconds
+Submitted
+{"status":true,"errorPopupFlag":false,"message":"Notification Sent successfully"}
+Random locale is : ga_IE
+Thread D Progress
+Progress 13 of 15
+create customer notifications with "new" status
+Loading 489 Subject Products
+Number of product images: 1
+{"status":true,"message":"Notification saved","data":16687}
+Create Notification Service Time : 7.79 Seconds
+[16687, 'HCP Notification', 'DKI1BPOCM_HC']
+Upload support tools to Notification: pexels-photo-3683099.jpeg
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 2.05 Seconds
+Upload support tools to Notification: 1.pdf
+{"status":true,"message":"Files uploaded successfully"}
+Support Material Attachments Service Time : 3.19 Seconds
+number of assignees: 4
+saveNotificationAssignees Service Time : 2.46 Seconds
+{"status":true,"message":"Success"}
+Assign Assignees
+submitNotification Service Time : 1.36 Seconds
+Submitted
+{"status":true,"errorPopupFlag":false,"message":"Notification Sent successfully"}
+Random locale is : en_GB
+Thread D Progress
+Progress 14 of 15
+Random locale is : pl_PL
+Thread D Progress
+Progress 15 of 15
+Execution time: D 0:04:03
