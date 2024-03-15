@@ -1,0 +1,1 @@
+pyinstaller --onefile --collect-all pyfiglet load_db_notifications_and_mapping.py

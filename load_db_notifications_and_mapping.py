@@ -75,6 +75,9 @@ fetch_signe_mapped_sub_accounts_fp = int(configs.get("fetch_signe_mapped_sub_acc
 fetch_signe_mapped_sub_accounts_lp = int(configs.get("fetch_signe_mapped_sub_accounts_lp").data)
 fetch_signe_mapped_sub_accounts_nb = int(configs.get("fetch_signe_mapped_sub_accounts_nb").data)
 choose_accounts_with_consignees = str(configs.get("choose_accounts_with_consignees").data)
+specific_note_ids = str(configs.get("specific_note_ids").data)
+note_id_with_special_chars = str(configs.get("note_id_with_special_chars").data)
+note_id_with_win_special_chars = str(configs.get("note_id_with_win_special_chars").data)
 only_hcp_pa = configs.get("only_hcp_pa").data
 only_mw_cu_co_re = configs.get("only_mw_cu_co_re").data
 total_number_notification_to_create = int(configs.get("total_number_notification_to_create").data)
@@ -134,6 +137,11 @@ default_print_color = 'green'
 error_print_color = 'red'
 info_print_color = 'yellow'
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+specific_note_ids_lst = specific_note_ids.split(",")
+
+
+def contains_only_spaces(lst):
+    return not any(s.strip() for s in lst)
 
 
 def show_perf_charts(stats_csv_file, service_name):
@@ -333,7 +341,7 @@ def generate_fake_email(number):
     return unique_list
 
 
-def notif_p1(n_type, without_support_tools, process_txt, process_lock, out_file):
+def notif_p1(n_type, without_support_tools, process_txt, process_lock, out_file, random_noid=True):
     df = pd.read_excel(r'subjectprodcuts.xlsx',
                        dtype={"Distribution Start Date": "string", "Distribution End Date": "string",
                               "Expiration Date": "string"})
@@ -367,10 +375,30 @@ def notif_p1(n_type, without_support_tools, process_txt, process_lock, out_file)
     fake_note_id_part = gen_random_string(nb_nb_note)
     if without_support_tools == 'yes':
         # note_id = process_txt + str(fake.ean(length=nb_nb_note)) + "_nosptls"
-        note_id = process_txt + str(fake_note_id_part) + "_nosptls"
+        note_id = process_txt + str(fake_note_id_part) + "_nost"
     else:
         # note_id = process_txt + str(fake.ean(length=nb_nb_note))
         note_id = process_txt + str(fake_note_id_part)
+
+    if note_id_with_special_chars.lower() == 'yes' and note_id_with_win_special_chars.lower() == 'yes':
+        sp_chars = '",*,:,<,>,?,/,\\,|'
+        sp_chars_all = '~,",#,%,&,*,:,<,>,?,/,\\,{,|,},!,@,$,^,(,),`'
+        sp_chars_lst = sp_chars.split(",")
+        random_sp_chars_lst = random.sample(sp_chars_lst, 3)
+        note_id = ''.join(random_sp_chars_lst) + note_id
+    elif note_id_with_special_chars.lower() == 'yes' and note_id_with_win_special_chars.lower() == 'no':
+        sp_chars = '",*,:,<,>,?,/,\\,|'
+        sp_chars_all = '~,",#,%,&,*,:,<,>,?,/,\\,{,|,},!,@,$,^,(,),`'
+        sp_chars_lst = sp_chars_all.split(",")
+        random_sp_chars_lst = random.sample(sp_chars_lst, 3)
+        note_id = ''.join(random_sp_chars_lst) + note_id
+    elif note_id_with_special_chars.lower() == 'no' and note_id_with_win_special_chars.lower() == 'yes':
+        sp_chars = '",*,:,<,>,?,/,\\,|'
+        sp_chars_all = '~,",#,%,&,*,:,<,>,?,/,\\,{,|,},!,@,$,^,(,),`'
+        sp_chars_lst = sp_chars.split(",")
+        random_sp_chars_lst = random.sample(sp_chars_lst, 3)
+        note_id = ''.join(random_sp_chars_lst) + note_id
+
     issue_date = str(fake.date_between('-2y', '-1y'))
     # if console_output: print(issue_date)
 
@@ -395,6 +423,16 @@ def notif_p1(n_type, without_support_tools, process_txt, process_lock, out_file)
 
     rand_type = gen_rand1(0, len(note_type))
     note_id = note_id + "_" + note_type[rand_type][:2]
+
+    if len(specific_note_ids_lst) == 1 and specific_note_ids_lst[0].lower() == 'nothing':
+        pass
+    elif not specific_note_ids_lst:
+        pass
+    elif contains_only_spaces(specific_note_ids_lst):
+        pass
+    else:
+        note_id = specific_note_ids_lst[-1]
+        specific_note_ids_lst.pop()
 
     # from db
     # note_type_id = get_notification_type_id_from_db(note_type[rand_type])
@@ -1173,7 +1211,10 @@ def notif_assign_accounts(notification_db_id, out_file, consig_filter, process_t
     #     print(all_accounts)
     #     print(all_accounts, file=out_file)
 
-    random_no_acc = gen_rand1(1, len(all_accounts))
+    if number_of_assignees > (len(all_accounts)):
+        random_no_acc = gen_rand1(1, len(all_accounts))
+    else:
+        random_no_acc = number_of_assignees
 
     accounts_list = []
 
